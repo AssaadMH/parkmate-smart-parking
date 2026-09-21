@@ -1,6 +1,6 @@
 # ParkMate: RFID-Gated Smart Parking
 > My first complete embedded system: badge-controlled barrier, slot sensing and a live LCD count, built in prépa for a robotics-programming innovation contest.
-`2023` · `Arduino` · `MFRC522 RFID` · `SPI` · `I2C LCD` · `Servo` · `IR sensors` · `Ultrasonic`
+`2023` · `Arduino` · `MFRC522 RFID` · `SPI` · `I2C LCD` · `Servo` · `IR sensors` · `Ultrasonic` · `Proteus ARES` · `PCB etching`
 
 ![ParkMate system](docs/img/parkmate-system.svg)
 
@@ -12,6 +12,16 @@ Built at IPEIG (Gafsa) in September and October 2023 and presented at a robotics
 - an **MFRC522 RFID reader** (SPI) checks the card against the authorised UID
 - a **servo** raises the barrier for seven seconds if access is granted and a space is free, otherwise the LCD shows *Parking Full* or *Access denied*
 - one **infrared sensor per slot** feeds the occupied / free count on a **20x4 I2C LCD**
+
+## The board
+
+Instead of leaving the prototype as jumper wires, I laid out a board in Proteus ARES, transferred it onto copper-clad and etched it myself, then fitted it with stacking headers so it plugs straight onto the Arduino.
+
+| Etched copper side | Component side |
+|---|---|
+| ![Etched copper side](docs/img/parkmate-shield-copper.jpg) | ![Component side](docs/img/parkmate-shield-top.jpg) |
+
+The Proteus ARES layout from the same presentation: [`docs/img/parkmate-layout.png`](docs/img/parkmate-layout.png).
 
 ## Pin map (MP6)
 
